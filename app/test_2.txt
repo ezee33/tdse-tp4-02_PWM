@@ -1,0 +1,12 @@
+En este segundo Test, el Duty Cycle de la señal se mantiene constante en 50%, es decir, la señal está el mismo tiempo en alto que en bajo a lo
+largo de un periodo.
+
+En su contraparte, el periodo de la señal se modifica entre 2 valores.
+Se tiene que el valor de la macro PERIOD es 65535 ticks. Como vimos en el test_1, esto puede traducirse a un valor de periodo de 1,024 ms
+con las configuraciones dadas. En esta prueba se tiene que el periodo varía entre PERIOD/2 y PERIOD/4, es decir, el periodo varía entre
+0,512 ms y 0,256 ms.
+
+Estas mediciones son consistentes con las observadas en forma experimental a través del osciloscopio.
+
+Al conectar un LED con una resistencia de polarización de 1 kohm a la salida del PWM se observó que el brillo de la misma no varía porque el
+Duty Cycle es constante.
