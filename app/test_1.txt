@@ -1,0 +1,18 @@
+En el Test_1 el periodo de la señal es constante.
+
+Cálculo del periodo:
+La macro PERIOD tiene un valor de 65535, que se mide en cantidad de tick de clock. En el .IOC se puede observar que la frecuencia de los tick es de
+64 MHz, lo que implica que cada tick tiene una duración de 64 us. A partir de acá se puede obterner que el periodo vale 
+PERIODO = 65535 / 64 us = 1,024 ms.
+El valor de la frecuencia medido en el osciloscopio es aproximadamente de 1000 Hz, por lo que el valor del periodo será de 1 ms. Es consistente con
+lo obtenido en forma teórica (teniendo en cuenta la incertidumbre en la medición).
+El Duty Cycle es un porcentaje de la cantidad de tiempo que la señal está en estado alto respecto del período total, que es la suma de los
+tiempos alto y bajo. Según el ingeniero Khaled Magdy:
+
+"The duty cycle percentage is controlled by changing the value of the CCRx register. And the duty cycle equals (CCRx/ARR) [%]"
+(Para más información visitar: https://deepbluembedded.com/stm32-pwm-example-timer-pwm-mode-tutorial/)
+
+En este test el Duty Cycle está variando desde 0% hasta 100% en 100 pasos con incremento/decremento de un 1% cada uno.
+
+Al conectar un LED con una resistencia de polarización de 1 kohm a la salida del PWM se observó que el brillo de la misma varía porque el
+Duty Cycle no es constante, por lo tanto la tensión eficaz variará.
