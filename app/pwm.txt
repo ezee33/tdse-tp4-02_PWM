@@ -1,0 +1,11 @@
+Configuración del TIM3:
+
+El TIM3 está configurado de forma tal que en el canal 1 haya una salida de Pulse Width Modulation (PWM).
+El TIM3 está configurado en el puerto PA6.
+Tiene desactivadas las opciones "Slave Mode", "Trigger Source" y "Clock Source".
+Está configurado para que produzca más de un periodo de pulso.
+
+
+Configuración de RCC:
+En el caso del RCC, tanto el HSE como el LSE están configurados con la resolución del Cristal.
+El HSE tiene un tiempo de inicio de 100 ms, mientras que el LSE tiene un valor de inicio de 5000 ms.
